@@ -73,13 +73,6 @@ def build_model():
     return model
 
 
-# def clf_nn():
-#     model = KerasClassifier(build_fn=build_model)
-#     parameter = dict(nb_epoch=nb_epoch, batch_size=batch_size)
-#     clf = GridSearchCV(model, parameter, n_jobs=-1, cv=CV, verbose=1, return_train_score=False)
-#     return clf
-
-
 def clf_rf():
     model = RandomForestClassifier(n_jobs=-1)
     parameter = {'max_depth': [10], 'min_samples_split': [5, 10],
